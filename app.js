@@ -13,13 +13,13 @@ app.get("/", async function(req, res, next) {
     const { vw, vh, w, h, resize, ...query } = req.query;
 
     const o = {
-      url: null,
+      url: "https://google.com",
       type: "jpeg", // jpeg or png
       output: "json", // json, base64, or binary
-      vw: vw ? parseInt(vw) : 800,
-      vh: vh ? parseInt(vh) : 600,
-      w: w ? parseInt(w) : 400,
-      h: h ? parseInt(h) : 300,
+      vw: vw ? parseInt(vw) : 720,
+      vh: vh ? parseInt(vh) : 1280,
+      w: w ? parseInt(w) : 640,
+      h: h ? parseInt(h) : 360,
       resize: resize ? String(resize).toLowerCase() === "true" : false,
       ...query
     };
